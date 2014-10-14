@@ -19,6 +19,13 @@ Install node modules (located in package.json)
 
 `npm install`
 
+Gulpfile
+=======================
+
+Runnning `gulp` will start the less compiler, autoprefixer, minify the css and put the rendered css back into the theme folder. Also the bootstrap and font-awesome fonts are copied into the theme folder for easier access in your less files.
+
+Running `gulp dev` watch your files for changes and triggers the live reload also it will not minify and concat the css files.
+
 Structure
 =======================
 
@@ -46,7 +53,3 @@ Rendered css files
 
 Place for your images you use in your css file
 
-Gulpfile
-=======================
-
-Runnning `gulp` will start the less compiler, autoprefixer, minify the css and put the rendered css back into the theme folder. Also the bootstrap and font-awesome fonts are copied into the theme folder for easier access in your less files.
