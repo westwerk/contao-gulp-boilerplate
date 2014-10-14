@@ -1,0 +1,23 @@
+{
+  "name": "reaq-website",
+  "version": "0.0.0",
+  "authors": [
+    "Tim Becker <tim@westwerk.ac>"
+  ],
+  "description": "contao gulp boilerplate",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
