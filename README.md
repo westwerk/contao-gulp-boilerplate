@@ -1,30 +1,21 @@
 Contao Boilerplate Setup with basic gulp and bower files
 =======================
 
-Install
+Installation
 =======================
 
-First install node.js and npmhttp://nodejs.org/
-Then install BOWER http://bower.io
+1. Install node.js and npm from http://nodejs.org/
+2. Install Bower from http://bower.io
+3. Clone this repository: `git clone https://github.com/westwerk-ac/contao-gulp-boilerplate.git`
+4. Install bower dependencies (bower.json): `bower install`
+5. Install node modules (package.json): `npm install`
 
-Clone the git repro
-
-`git clone https://github.com/westwerk-ac/contao-gulp-boilerplate.git`
-
-Install bower dependencies (located in bower.json)
-
-`bower install`
-
-Install node modules (located in package.json)
-
-`npm install`
-
-Gulpfile
+Workflow
 =======================
 
-Runnning `gulp` will start the less compiler, autoprefixer, minify the css and put the rendered css back into the theme folder. Also the bootstrap and font-awesome fonts are copied into the theme folder for easier access in your less files.
+Runnning `gulp` will start the less compiler, autoprefixer, minify the css and put the rendered css back into the theme folder. The bootstrap and font-awesome fonts will be copied into the theme folder for easier access in your less files. Note that `gulp` will only run this once and then exit.
 
-Running `gulp dev` watch your files for changes and triggers the live reload also it will not minify and concat the css files.
+Running `gulp dev` will watch your files for changes and triggers the live reload. It will also **not** minify and concatenate css files.
 
 Structure
 =======================
