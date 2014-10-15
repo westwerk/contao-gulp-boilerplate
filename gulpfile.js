@@ -36,7 +36,7 @@ gulp.task('css_main', function () {
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(prefix('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-        .pipe(header("/* This file is generated — do not edit by hand! */\n"))
+        .pipe(header("/* This file is generated, do not edit by hand! */\n"))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(themePath + 'css/'));
 });
@@ -46,7 +46,7 @@ gulp.task('css_minify', ['css_main'], function () {
     gulp.src('./files/theme/css/*.css')
         .pipe(concat('all.css'))
         .pipe(minifyCss())
-        .pipe(header("/* This file is generated — do not edit by hand! */\n"))
+        .pipe(header("/* This file is generated, do not edit by hand! */\n"))
         .pipe(gulp.dest(themePath + 'css/'));
 });
 
