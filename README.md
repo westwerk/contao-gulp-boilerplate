@@ -36,17 +36,9 @@ Home for your cool custom less stuff
 
 `/files/theme/less/bootstrap.less`
 
-Imports the bootstra core files loaded throw bower but includes an own variables.less file from partials/
+Imports the bootstrap core files loaded through bower but includes a custom `variables.less` from `partials/`, so you can user `bower update` without losing your overwrites.  
 
-`/files/theme/css/`
+`/files/theme/{css,fonts,img}/`
 
-Rendered css files
-
-`/files/theme/fonts/`
-
-(web)fonts
-
-`/files/theme/img/`
-
-Place for your images you use in your css file
+Compiled CSS files, fonts and a place for your images.
 
