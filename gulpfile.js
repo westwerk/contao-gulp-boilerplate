@@ -1,13 +1,13 @@
-var gulp = require('gulp'),
-    less = require('gulp-less'),
-    path = require('path'),
+var gulp       = require('gulp'),
+    less       = require('gulp-less'),
+    path       = require('path'),
     sourcemaps = require('gulp-sourcemaps'),
-    minifyCss = require('gulp-minify-css'),
-    combine = require('stream-combiner'),
-    prefix = require('gulp-autoprefixer'),
-    watch = require('gulp-watch'),
-    header = require('gulp-header'),
-    concat = require('gulp-concat');
+    minifyCss  = require('gulp-minify-css'),
+    combine    = require('stream-combiner'),
+    prefix     = require('gulp-autoprefixer'),
+    watch      = require('gulp-watch'),
+    header     = require('gulp-header'),
+    concat     = require('gulp-concat'),
     livereload = require('gulp-livereload');
 
 // Set some vars
@@ -26,7 +26,8 @@ gulp.task('dev', ['watch']);
 gulp.task('watch', ['css_main'], function () {
     gulp.watch(themePath + 'less/**/*.less', ['css_main']);
     livereload.listen();
-    gulp.watch(themePath + 'css/**').on('change', livereload.changed);
+    gulp.watch(themePath + 'css/**')
+        .on('change', livereload.changed);
 });
 
 // Compile our css and push it to the public webfolder
@@ -41,12 +42,12 @@ gulp.task('css_main', function () {
 });
 
 // Minify the css
-gulp.task('css_minify', ['css_main'], function() {
-    gulp.src('./files/theme/reaq/css/*.css')
+gulp.task('css_minify', ['css_main'], function () {
+    gulp.src('./files/theme/css/*.css')
         .pipe(concat('all.css'))
         .pipe(minifyCss())
         .pipe(header("/* This file is generated — do not edit by hand! */\n"))
-    .pipe(gulp.dest(themePath + 'css/'));
+        .pipe(gulp.dest(themePath + 'css/'));
 });
 
 // We need the bootstrap fonts in public, lets copy
