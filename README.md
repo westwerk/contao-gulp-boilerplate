@@ -20,6 +20,10 @@ Running `gulp dev` will start watching your files for changes and triggers the l
 
 Install new JS/CSS assets with `bower search` and `bower install`. To save these as dependencies, use the `-D` or `-S` flags (for more information, see the [Bower documentation](http://bower.io/docs/api/#install)). 
 
+### Compiled files
+
+It's usually a good idea to flag `.css` and `.map` files as `binary` to remove their output when diffing. See our `.gitattributes` for an example (you can find [more information on git attributes here](http://git-scm.com/docs/gitattributes) - they are a very useful and often overlooked feature of git!).
+
 ## Structure
 
 `/files/theme/less/main.less`
