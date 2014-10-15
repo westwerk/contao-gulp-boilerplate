@@ -28,11 +28,12 @@ gulp.task('watch', ['css_main'], function () {
 // Compile our css and push it to the public webfolder
 gulp.task('css_main', function () {
     gulp.src(themepath + 'less/main.less')
+        .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(prefix('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(header("/* This file is generated — do not edit by hand! */\n"))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(themepath + 'css/'));
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(themepath + 'css/'));
 });
 
 // Minify the css
