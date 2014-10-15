@@ -5,7 +5,7 @@ Installation
 =======================
 
 1. Install node.js and npm from http://nodejs.org/
-2. Install Bower from http://bower.io
+2. Install Bower from http://bower.io (make sure to install Bower globally via the `-g` flag)
 3. Clone this repository: `git clone https://github.com/westwerk-ac/contao-gulp-boilerplate.git`
 4. Install bower dependencies (bower.json): `bower install`
 5. Install node modules (package.json): `npm install`
