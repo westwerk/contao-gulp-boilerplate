@@ -37,7 +37,10 @@ gulp.task('css_main', function () {
         .pipe(less())
         .pipe(prefix('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(header("/* This file is generated, do not edit by hand! */\n"))
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('../css/maps', {
+            includeContent: false,
+            sourceRoot: '../less'
+        }))
         .pipe(gulp.dest(themePath + 'css/'));
 });
 
