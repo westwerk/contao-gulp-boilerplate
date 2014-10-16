@@ -1,33 +1,30 @@
-Contao Boilerplate Setup with basic gulp and bower files
-=======================
+# Contao Boilerplate Setup with basic gulp and bower files
 
-Install
-=======================
+This repository contains a starting point to theme development with [Contao](https://github.com/contao/core). Tools like less, bower and gulp make it easier for you to get your assets under control while maintaining a convenient workflow.
 
-First install node.js and npmhttp://nodejs.org/
-Then install BOWER http://bower.io
+## Installation
 
-Clone the git repro
+1. Install [node.js and npm](http://nodejs.org/)
+2. Install [Bower](http://bower.io) (make sure to install Bower globally via the `-g` flag)
+3. Clone this repository: `git clone https://github.com/westwerk-ac/contao-gulp-boilerplate.git`
+4. Install bower dependencies (bower.json): `bower install`
+5. Install node modules (package.json): `npm install`
 
-`git clone https://github.com/westwerk-ac/contao-gulp-boilerplate.git`
+## Workflow
 
-Install bower dependencies (located in bower.json)
+Runnning `gulp` will start the less compiler, autoprefixer, minify the css and put the rendered css back into the theme folder. The bootstrap and font-awesome fonts will be copied into the theme folder for easier access in your less files. Note that `gulp` will only run this once and then exit.
 
-`bower install`
+Running `gulp dev` will start watching your files for changes and triggers the live reload. It will also **not** minify and concatenate css files.
 
-Install node modules (located in package.json)
+### Additional Bower assets
 
-`npm install`
+Install new JS/CSS assets with `bower search` and `bower install`. To save these as dependencies, use the `-D` or `-S` flags (for more information, see the [Bower documentation](http://bower.io/docs/api/#install)). 
 
-Gulpfile
-=======================
+### Compiled files
 
-Runnning `gulp` will start the less compiler, autoprefixer, minify the css and put the rendered css back into the theme folder. Also the bootstrap and font-awesome fonts are copied into the theme folder for easier access in your less files.
+It's usually a good idea to flag `.css` and `.map` files as `binary` to remove their output when diffing. See our `.gitattributes` for an example (you can find [more information on git attributes here](http://git-scm.com/docs/gitattributes) - they are a very useful and often overlooked feature of git!).
 
-Running `gulp dev` watch your files for changes and triggers the live reload also it will not minify and concat the css files.
-
-Structure
-=======================
+## Structure
 
 `/files/theme/less/main.less`
 
@@ -39,17 +36,9 @@ Home for your cool custom less stuff
 
 `/files/theme/less/bootstrap.less`
 
-Imports the bootstra core files loaded throw bower but includes an own variables.less file from partials/
+Imports the bootstrap core files loaded through bower but includes a custom `variables.less` from `partials/`, so you can user `bower update` without losing your overwrites.  
 
-`/files/theme/css/`
+`/files/theme/{css,fonts,img}/`
 
-Rendered css files
-
-`/files/theme/fonts/`
-
-(web)fonts
-
-`/files/theme/img/`
-
-Place for your images you use in your css file
+Compiled CSS files, fonts and a place for your images.
 
