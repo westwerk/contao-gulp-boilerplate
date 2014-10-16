@@ -58,15 +58,15 @@ gulp.task('copy_fonts', function () {
     var combined = combine(
         gulp.src([bowerPath + 'bootstrap/fonts/**/*.{ttf,woff,eof,svg}']),
         gulp.src([bowerPath + 'font-awesome/fonts/**/*.{ttf,woff,eof,svg}']),
-        gulp.dest(themePath + 'fonts')
+        gulp.dest(themePath + 'fonts/')
     );
     combined.on('error', console.error.bind(console));
 });
 
 // Lets copie some javascript
 gulp.task('copy_js', function() {
-    gulp.src('./bower_components/bootstrap/js/**/*.js')
+    gulp.src(bowerPath + 'bootstrap/js/**/*.js')
         .pipe(concat('bootstrap.js'))
-        .pipe(header("/* This file is generated — do not edit by hand! */\n"))
+        .pipe(header("/* This file is generated, do not edit by hand! */\n"))
     .pipe(gulp.dest(themepath + 'js/'));
 });
