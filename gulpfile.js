@@ -54,6 +54,14 @@ gulp.task('copy_fonts', function () {
     combined.on('error', console.error.bind(console));
 });
 
+// Lets copie some javascript
+gulp.task('copy_js', function() {
+    gulp.src('./bower_components/bootstrap/js/**/*.js')
+        .pipe(concat('bootstrap.js'))
+        .pipe(header("/* This file is generated — do not edit by hand! */\n"))
+    .pipe(gulp.dest(themepath + 'js/'));
+});
+
 // Define default and special tasks
-gulp.task('default', ['css_minify', 'copy_fonts']);
-gulp.task('dev', ['watch']);
+gulp.task('default', ['css_minify', 'copy_js', 'copy_fonts']);
+gulp.task('dev', ['copy_js', 'copy_fonts', 'watch']);
