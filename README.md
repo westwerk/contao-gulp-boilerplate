@@ -14,7 +14,11 @@ This repository contains a starting point to theme development with [Contao](htt
 
 Runnning `gulp` will start the less compiler, autoprefixer, minify the css and put the rendered css back into the theme folder. The bootstrap and font-awesome fonts will be copied into the theme folder for easier access in your less files. Note that `gulp` will only run this once and then exit.
 
-Running `gulp dev` will start watching your files for changes and triggers the live reload. It will also **not** minify and concatenate css files.
+Running `gulp dev` will start watching your files for changes and triggers the live reload. It will **not** minify and concatenate CSS files.
+
+### JSHint
+
+We're using JSHint to lint our JS files. If you want to disable that, remove the watcher from `gulp/tasks/watch.js`. You can find the JSHint config in `package.json`.
 
 ### Additional Bower assets
 
