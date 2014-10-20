@@ -21,7 +21,7 @@ Running `gulp dev` will start watching your files for changes and triggers the l
 
 You'll probably want to include additional external JS files in your project. First, search using Bower (`bower search`) and install via bower if your library/package/... is on there (see [Additional Bower assets]/(https://github.com/westwerk-ac/contao-gulp-boilerplate#additional-bower-assets). If you can't install via Bower or it's a custom script, follow this example:
 
-* Let's say you want to add awesomeBlink.js to your project. Put the fil in `files/theme/js/vendor/`
+* Let's say you want to add awesomeBlink.js to your project. Put the file in `files/theme/js/vendor/`
 * Update `files/theme/js/main.js`:
 
 ```js
@@ -36,7 +36,7 @@ requirejs.config({
         // ...
 ```
 
-* You can then use all of awesomeBlink.js' functionality in a require block:
+* You can then use all of awesomeBlink.js' functionality within a require block:
 
 ```js
 require(['awesomeBlink'], function(blink) {
@@ -46,7 +46,7 @@ require(['awesomeBlink'], function(blink) {
 });
 ```
 
-* See the require.js documentation and [Writing Modular JavaScript With AMD, CommonJS & ES Harmony](http://addyosmani.com/writing-modular-js/) for more information on Require.JS/AMD loaders & modules.
+* See the [Require.js documentation](http://requirejs.org/docs/) and [Writing Modular JavaScript With AMD, CommonJS & ES Harmony](http://addyosmani.com/writing-modular-js/) for more information on Require.js/AMD loaders & modules.
 
 ### JSHint
 
@@ -78,3 +78,6 @@ Imports the bootstrap core files loaded through bower but includes a custom `var
 
 Compiled CSS files, fonts and a place for your images.
 
+`/files/theme/js/vendor/`
+
+A place for your custom non-bower JS assets.
