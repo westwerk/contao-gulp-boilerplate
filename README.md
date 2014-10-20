@@ -6,9 +6,10 @@ This repository contains a starting point to theme development with [Contao](htt
 
 1. Install [node.js and npm](http://nodejs.org/)
 2. Install [Bower](http://bower.io) (make sure to install Bower globally via the `-g` flag)
-3. Clone this repository: `git clone https://github.com/westwerk-ac/contao-gulp-boilerplate.git`
-4. Install bower dependencies (bower.json): `bower install`
-5. Install node modules (package.json): `npm install`
+3. Install [JShint](http://www.jshint.com/) (make sure to install JSHint globally via the `-g` flag)
+4. Clone this repository: `git clone https://github.com/westwerk-ac/contao-gulp-boilerplate.git`
+5. Install bower dependencies (bower.json): `bower install`
+6. Install node modules (package.json): `npm install`
 
 ## Workflow
 
