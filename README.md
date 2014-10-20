@@ -13,13 +13,13 @@ This repository contains a starting point to theme development with [Contao](htt
 
 ## Workflow
 
-Runnning `gulp` will start the less compiler, autoprefixer, minify the css and put the rendered css back into the theme folder. The bootstrap and font-awesome fonts will be copied into the theme folder for easier access in your less files. Note that `gulp` will only run this once and then exit.
+Running `gulp` will start the less compiler, autoprefixer, minify the css and put the rendered css back into the theme folder. The bootstrap and font-awesome fonts will be copied into the theme folder for easier access in your less files. Note that `gulp` will only run this once and then exit.
 
 Running `gulp dev` will start watching your files for changes and triggers the live reload. It will **not** minify and concatenate CSS files.
 
 ### Installing & including JS files
 
-You'll probably want to include additional external JS files in your project. First, search using Bower (`bower search`) and install via bower if your library/package/... is on there (see [Additional Bower assets](#additional-bower-assets). If you can't install via Bower or it's a custom script, follow this example:
+You'll probably want to include additional external JS files in your project. First, search using Bower (`bower search`) and install via bower if your library/package/... is on there (see [Additional Bower assets](#additional-bower-assets)). If you can't install via Bower or it's a custom script, follow this example:
 
 * Let's say you want to add awesomeBlink.js to your project. Put the file in `files/theme/js/vendor/`
 * Update `files/theme/js/main.js`:
