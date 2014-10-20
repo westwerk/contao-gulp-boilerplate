@@ -19,7 +19,7 @@ Running `gulp dev` will start watching your files for changes and triggers the l
 
 ### Installing & including JS files
 
-You'll probably want to include additional external JS files in your project. First, search using Bower (`bower search`) and install via bower if your library/package/... is on there (see [Additional Bower assets]/(https://github.com/westwerk-ac/contao-gulp-boilerplate#additional-bower-assets). If you can't install via Bower or it's a custom script, follow this example:
+You'll probably want to include additional external JS files in your project. First, search using Bower (`bower search`) and install via bower if your library/package/... is on there (see [Additional Bower assets](#additional-bower-assets). If you can't install via Bower or it's a custom script, follow this example:
 
 * Let's say you want to add awesomeBlink.js to your project. Put the file in `files/theme/js/vendor/`
 * Update `files/theme/js/main.js`:
