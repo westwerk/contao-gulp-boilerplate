@@ -1,19 +1,58 @@
 {
-  "name": "contao-gulp-boilerplate",
-  "description": "A starting point for Contao theme development with Gulp and Bower",
-  "version": "1.0.0",
-  "homepage": "https://github.com/westwerk-ac/contao-gulp-boilerplate",
-  "dependencies": {
-    "amd-optimize": "*",
-    "gulp": "^3.8.8",
-    "gulp-autoprefixer": "^1.0.1",
-    "gulp-concat": "^2.4.1",
-    "gulp-header": "^1.1.1",
-    "gulp-less": "^1.3.6",
-    "gulp-livereload": "^2.1.1",
-    "gulp-minify-css": "^0.3.10",
-    "gulp-sourcemaps": "^1.2.4",
-    "gulp-watch": "^1.1.0",
-    "stream-combiner": "^0.2.1"
-  }
+    "name": "contao-gulp-boilerplate",
+    "description": "A starting point for Contao theme development with Gulp and Bower",
+    "version": "1.0.0",
+    "homepage": "https://github.com/westwerk-ac/contao-gulp-boilerplate",
+    "repository": "github.com/westwerk-ac/contao-gulp-boilerplate",
+    "dependencies": {
+        "amd-optimize": "*",
+        "events": "^1.0.2",
+        "gulp": "^3.8.8",
+        "gulp-autoprefixer": "^1.0.1",
+        "gulp-concat": "^2.4.1",
+        "gulp-header": "^1.1.1",
+        "gulp-jshint": "^1.8.5",
+        "gulp-less": "^1.3.6",
+        "gulp-livereload": "^2.1.1",
+        "gulp-minify-css": "^0.3.10",
+        "gulp-notify": "^2.0.0",
+        "gulp-plumber": "^0.6.6",
+        "gulp-sourcemaps": "^1.2.4",
+        "gulp-watch": "^1.1.0",
+        "jshint-stylish": "^1.0.0",
+        "map-stream": "^0.1.0",
+        "require-dir": "^0.1.0",
+        "stream-combiner": "^0.2.1"
+    },
+    "jsHintConfig": {
+        "asi": true,   // true = don't require semicolons
+        "boss": false, // true =  suppress warnings about the use of assignments in cases where comparisons are expected
+        "undef": true, // true = flag all undefined variables that are not [explain]
+        "debug": false, // true = ignore "debugger" statements, I never user this
+        "eqnull": false, // true = suppresses warnings about == null comparisons, doesn't seem to work
+        "esnext": false, // true = tells JSHint that your code uses ECMAScript 6 specific syntax
+        "eqeqeq": true, //
+        "evil": false, // true = suppress 'eval' warnings, I never use it
+        "expr": false, // true =  suppresses warnings about the use of expressions where normally you would expect to see assignments or function calls
+        "funcscope": false, // true = suppresses warnings about accessing variables defined out of scope
+        "gcl": true, // true = compatible with Google Closure Compiler
+        "globalstrict": false, // true = suppress global var warnings, being ignored?
+        "iterator": false, // true = suppresses warnings about the __iterator__ property
+        "lastsemic": false, // true = suppresses warnings about missing semicolons for the last statement in a one-line block
+        "laxbreak": false, // true = suppresses most of the warnings about possibly unsafe line breakings in your code
+        "laxcomma": false, // true =  suppresses warnings about comma-first coding style
+        "loopfunc": false, // true = suppresses warnings about defining functions inside of loops
+        "maxerr": 25, // set the maximum amount of warnings for jshint
+        "moz": false, // true = tells JSHint that your code uses Mozilla JavaScript extensions
+        "multistr": false, // true = suppresses warnings about multi-line strings
+        "notypeof": false, // true = suppresses warnings about the use of script-targeted URLs
+        "proto": false, // true = suppresses warnings about the __proto__ property
+        "scripturl": false, // suppresses warnings about the use of script-targeted URLs—such as javascript:....
+        "smarttabs": false, // true = suppresses warnings about mixed tabs and spaces
+        "shadow": false, // true = suppresses warnings about variable shadowing
+        "sub": false, // true = suppresses warnings about using [] notation when it can be expressed in dot notation
+        "supernew": false, // true = suppresses warnings about "weird" constructions
+        "validthis": false, // true = suppresses warnings about possible strict violations
+        "noyield": false // true = suppresses warnings about generator functions with no yield statement in them
+    }
 }
