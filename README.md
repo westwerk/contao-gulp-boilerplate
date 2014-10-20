@@ -46,6 +46,7 @@ require(['awesomeBlink'], function(blink) {
 });
 ```
 
+* Your scripts will be automatically loaded via Require.js as long as you have configured `main.js` correctly. See `test/index.html` and `test/index-dev.html` for how to include Require.js in your template files.
 * See the [Require.js documentation](http://requirejs.org/docs/) and [Writing Modular JavaScript With AMD, CommonJS & ES Harmony](http://addyosmani.com/writing-modular-js/) for more information on Require.js/AMD loaders & modules.
 
 ### JSHint
