@@ -9,9 +9,9 @@ requirejs.config({
     }
 });
 
-require(['jquery'], function($) {
+require(['jquery'], function ($) {
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         console.log('JS asset setup working!');
     });
 
