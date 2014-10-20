@@ -1,9 +1,10 @@
 {
-  "name": "reaq.eu",
-  "description": "reaq real estate",
+  "name": "contao-gulp-boilerplate",
+  "description": "A starting point for Contao theme development with Gulp and Bower",
   "version": "1.0.0",
-  "homepage": "reaq.eu",
-  "devDependencies": {
+  "homepage": "https://github.com/westwerk-ac/contao-gulp-boilerplate",
+  "dependencies": {
+    "amd-optimize": "*",
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "^1.0.1",
     "gulp-concat": "^2.4.1",
