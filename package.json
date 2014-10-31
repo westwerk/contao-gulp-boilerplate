@@ -6,7 +6,6 @@
     "repository": "github.com/westwerk-ac/contao-gulp-boilerplate",
     "dependencies": {
         "amd-optimize": "*",
-        "events": "^1.0.2",
         "gulp": "^3.8.8",
         "gulp-autoprefixer": "^1.0.1",
         "gulp-concat": "^2.4.1",
