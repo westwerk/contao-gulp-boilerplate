@@ -25,34 +25,34 @@
         "stream-combiner": "^0.2.1"
     },
     "jsHintConfig": {
-        "asi": true,   // true = don't require semicolons
-        "boss": false, // true =  suppress warnings about the use of assignments in cases where comparisons are expected
-        "undef": true, // true = flag all undefined variables that are not [explain]
-        "debug": false, // true = ignore "debugger" statements, I never user this
-        "eqnull": false, // true = suppresses warnings about == null comparisons, doesn't seem to work
-        "esnext": false, // true = tells JSHint that your code uses ECMAScript 6 specific syntax
-        "eqeqeq": true, //
-        "evil": false, // true = suppress 'eval' warnings, I never use it
-        "expr": false, // true =  suppresses warnings about the use of expressions where normally you would expect to see assignments or function calls
-        "funcscope": false, // true = suppresses warnings about accessing variables defined out of scope
-        "gcl": true, // true = compatible with Google Closure Compiler
-        "globalstrict": false, // true = suppress global var warnings, being ignored?
-        "iterator": false, // true = suppresses warnings about the __iterator__ property
-        "lastsemic": false, // true = suppresses warnings about missing semicolons for the last statement in a one-line block
-        "laxbreak": false, // true = suppresses most of the warnings about possibly unsafe line breakings in your code
-        "laxcomma": false, // true =  suppresses warnings about comma-first coding style
-        "loopfunc": false, // true = suppresses warnings about defining functions inside of loops
-        "maxerr": 25, // set the maximum amount of warnings for jshint
-        "moz": false, // true = tells JSHint that your code uses Mozilla JavaScript extensions
-        "multistr": false, // true = suppresses warnings about multi-line strings
-        "notypeof": false, // true = suppresses warnings about the use of script-targeted URLs
-        "proto": false, // true = suppresses warnings about the __proto__ property
-        "scripturl": false, // suppresses warnings about the use of script-targeted URLs—such as javascript:....
-        "smarttabs": false, // true = suppresses warnings about mixed tabs and spaces
-        "shadow": false, // true = suppresses warnings about variable shadowing
-        "sub": false, // true = suppresses warnings about using [] notation when it can be expressed in dot notation
-        "supernew": false, // true = suppresses warnings about "weird" constructions
-        "validthis": false, // true = suppresses warnings about possible strict violations
-        "noyield": false // true = suppresses warnings about generator functions with no yield statement in them
+        "asi": true,
+        "boss": false,
+        "undef": true,
+        "debug": false,
+        "eqnull": false,
+        "esnext": false,
+        "eqeqeq": true,
+        "evil": false,
+        "expr": false,
+        "funcscope": false,
+        "gcl": true,
+        "globalstrict": false,
+        "iterator": false,
+        "lastsemic": false,
+        "laxbreak": false,
+        "laxcomma": false,
+        "loopfunc": false,
+        "maxerr": 25,
+        "moz": false,
+        "multistr": false,
+        "notypeof": false,
+        "proto": false,
+        "scripturl": false,
+        "smarttabs": false,
+        "shadow": false,
+        "sub": false,
+        "supernew": false,
+        "validthis": false,
+        "noyield": false
     }
 }
