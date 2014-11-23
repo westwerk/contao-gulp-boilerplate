@@ -12,6 +12,8 @@ gulp.task('watch', ['css_main', 'lint'], function () {
 
     livereload.listen();
     gulp.watch(config.themePath + 'css/**')
-        .on('change', livereload.changed);
+        .on('change', function(object) {
+        	livereload.changed(object.path);
+        });
 });
 
