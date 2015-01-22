@@ -16,7 +16,9 @@ gulp.task('css_main', function () {
             message: "Compiling main.less ..."
         }))
         .pipe(sourcemaps.init())
-        .pipe(less())
+        .pipe(less().on('error', function(error) {
+            notify().write(error);
+        }))
         .pipe(prefix('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(header("/* This file is generated, do not edit by hand! */\n"))
         .pipe(sourcemaps.write('../css/maps', {
