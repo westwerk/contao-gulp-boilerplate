@@ -1,14 +1,17 @@
 var gulp    = require('gulp'),
-    config  = require('../config'),
-    combine = require('stream-combiner');
+    config  = require('../config');
 
 // We need the bootstrap fonts in public, lets copy
 gulp.task('copy_fonts', function () {
-    var combined = combine(
-        gulp.src([config.bowerPath + 'bootstrap/fonts/**/*.{ttf,woff,eof,svg}']),
-        gulp.src([config.bowerPath + 'font-awesome/fonts/**/*.{ttf,woff,eof,svg}']),
-        gulp.dest(config.themePath + 'fonts')
-    );
-    combined.on('error', console.error.bind(console));
-    return combined;
+    return gulp
+        .src([
+            // bootstrap glyphicons
+            config.bowerPath + 'bootstrap/fonts/**/*.{ttf,woff,eot,svg}',
+            // fontawesome, if you have it
+            config.bowerPath + 'fontawesome/fonts/**/*.{ttf,woff,eot,svg}',
+            // alternative spelling
+            config.bowerPath + 'font-awesome/fonts/**/*.{ttf,woff,eot,svg}',
+            config.bowerPath + 'Font-awesome/fonts/**/*.{ttf,woff,eot,svg}'
+        ])
+        .pipe(gulp.dest(config.themePath + 'fonts'));
 });
