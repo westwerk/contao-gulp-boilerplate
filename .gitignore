@@ -1,5 +1,30 @@
+# We use this gitignore to manage contao projects in .git repositories. 
+# It's totaly different from the core .gitignore since we are including all project-content files/, exclude localconfig, use composer in every project, include core modules (and composer symlinks)
+# if you don't know how to handle this gitignore try this snippet: https://bitbucket.org/snippets/westwerk/Kny5
+
 .DS_Store
 .idea
 node_modules/
 npm-debug.log
+
 files/theme/assets/*
+files/theme/css/*
+
+/.htaccess
+/*.xml
+/composer
+/contao/update.phar.php
+/assets/css/*
+/assets/images/**/*
+/assets/js/*
+/share/*.xml
+/system/cache/*
+/system/config/dcaconfig.php
+/system/config/initconfig.php
+/system/config/langconfig.php
+/system/config/localconfig.php
+/system/config/pathconfig.php
+/system/cron/cron.txt
+/system/logs/*
+/system/tmp/*
+/vendor
