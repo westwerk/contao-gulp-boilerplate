@@ -38,7 +38,7 @@ var myReporter = function() {
 };
 
 gulp.task('lint', function () {
-    var glob = config.themePath + 'js/**/*.js';
+    var glob = config.themePath + 'js/*.js';
 
     return gulp.src(glob)
         .pipe(notify({
